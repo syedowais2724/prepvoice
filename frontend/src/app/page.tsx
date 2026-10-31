@@ -148,7 +148,7 @@ function ActiveInterviewRoom({
     if (hintLoading) return;
     setHintLoading(true);
     try {
-      const apiUrl = process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000";
+      const apiUrl = "";
       const lastInterviewerQuestion = [...transcript]
         .reverse()
         .find((t) => t.speaker.toLowerCase() === "interviewer")?.text;
@@ -431,7 +431,7 @@ Requirements:
     setLoadingStage("Synthesizing custom 5-question viva rubric with Gemini 2.5 Flash...");
 
     try {
-      const apiUrl = process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000";
+      const apiUrl = "";
       const res = await fetch(`${apiUrl}/api/interview/start`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -466,7 +466,7 @@ Requirements:
     setLoadingStage("Evaluating technical depth, spoken clarity, and English refactoring...");
 
     try {
-      const apiUrl = process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000";
+      const apiUrl = "";
       const res = await fetch(`${apiUrl}/api/interview/evaluate`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
