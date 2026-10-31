@@ -1,0 +1,7 @@
+fastapi
+uvicorn
+pydantic
+python-dotenv
+google-genai
+livekit-api
+livekit-agents[google,deepgram,cartesia,silero]~=1.0
